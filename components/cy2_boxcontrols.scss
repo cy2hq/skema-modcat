@@ -1,0 +1,51 @@
+/* define box-controls and adding cy2_wrap for ps_box-edit with value */
+
+
+/* standard box controls */
+.ps_box-edit, .ps_box-dropdown, .ps_box-checkbox, .ps_box-longedit {
+  .ps_box-label {
+    .ps-label, .ps-text {
+      color: $color-black;
+      font-family: $standard-font;
+      font-size: 12pt;
+      font-weight: normal;
+    }
+  }
+  .ps_box-control {
+    textarea, input[type='text'], input[type='url'],input[type='date'],input[type='time'], input[type='number'],
+    input[type='search'],input[type='password'],input[type='datetime'],input[type='datetime-local'],input[type='email'],input[type='tel'], select {
+      border-radius: 0px;
+      box-shadow: none !important;
+      padding-left: 10px;
+//      width: 300px;
+      border: 1px solid $color-controlborder;
+      background-color: $color-controlbg;
+    }
+  }
+}
+
+/* box-edit wrap text */
+.ps_box-edit.psc_has_value.cy2_wrap {
+	.ps_box-value {
+		white-space: pre-line;
+	}
+}
+
+/* align labels left */
+.ps_box-label {
+  text-align:left;
+}
+
+/* disabled link */
+.ps_box-link.psc_disabled {
+  a {
+    pointer-events: none;
+    color: $color-black;
+    cursor: default;
+    text-decoration: none;
+    &:hover {
+      color: $color-darkgray;
+      text-decoration: none;
+    }
+  }
+}

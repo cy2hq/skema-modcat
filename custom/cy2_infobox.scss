@@ -1,0 +1,141 @@
+.cy2_infobox_container {
+  display: flex;
+  
+  background-color:$color-gray;
+  flex-direction: column;
+  
+  &.cy2_infobox_container_alt {
+    background-color:$color-darkgray;
+    color: $color-white;
+    font-family: $standard-font;
+    
+    .cy2_pagetitle.ps_box-edit {
+      color: $color-white;
+      font-family: $standard-font;
+      
+      >.ps_box-value {
+        font-size: 24px;
+        font-weight: 900;
+      }
+    }
+    
+    .ps_box-edit:not(.cy2_pagetitle), .ps_box-dropdown:not(.cy2_pagetitle) {
+      margin-bottom: 0;
+      >.ps_box-value {
+        color: $color-white;
+        font-size: 15px;
+        font-weight: normal;
+      }
+      >.ps_box-label >.ps-label {
+        color: $color-white;
+        font-size: 15px !important;
+      }
+    }
+  }
+  > .cy2_infobox_toolbar {
+    height: 30px;
+    > .cy2_infobox_closebtn,
+    > .cy2_infobox_openbtn {
+      border: 1px solid transparent;
+      float: right;
+      height: 20px;
+      margin-right: 3px;
+      margin-top: 3px;
+      width: 20px;
+      &:after {
+        border: none;
+        content: $icon_chevron-up;
+        display: block;
+        font-family: $fontname-icons;
+        font-size: 24px;
+        margin: -3px 0px 0px -2.5px;
+        /*position: absolute;*/
+      }
+      &:hover {
+        border-radius: 12px;
+        border: 1px solid gray;
+      }
+    }
+    
+    > .cy2_infobox_closebtn {
+      &:after {
+        content: $icon_chevron-down;
+      }
+    }
+    > .cy2_infobox_openbtn {
+        display: none;
+        &:after {
+          content: $icon_chevron-up;
+        }
+      }
+    
+
+  } /* toolbox */
+  >.cy2_infobox_main {
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+    padding-bottom: 26px;
+    overflow: hidden;
+    >.cy2_flex_object {
+        align-self: normal !important;
+    }
+    >.cy2_infobox_content {
+      display: flex;
+      max-width: 450px;
+      align-self: center;
+      &.psc_error {
+        background-color: $color-error;
+      }
+      &.cy2_color_turquoise {
+        background-color: $color-turquoise;
+      }
+    }
+  }
+  &.psc_error {
+    background-color: $color-error;
+  }
+  &.cy2_color_turquoise {
+    background-color: $color-turquoise;
+  }
+}
+
+.cy2_infobox_container.cy2_infobox_collapsed {
+   > .cy2_infobox_toolbar {
+    >.cy2_infobox_closebtn {
+      display: none;
+    }
+    >.cy2_infobox_openbtn {
+      display: block;
+    }
+   }
+   >.cy2_infobox_main {
+    height: 10px;
+   }
+}
+/* PSSLI - 17.09.2019 - mixin for info box question*/
+@mixin cy2_infobox_question($w: 40vw) {
+  background-color: $color-gray;
+  font-family: $standard-font;
+  font-size: 16px;
+  padding: 10px;
+  margin-left: -10px;
+  margin-right: -10px;
+  max-width: $w;
+}
+
+.cy2_infobox_question {
+  @include cy2_infobox_question; /* defaults to 40vw*/
+}
+
+/* on small device the infobox text needs padding */
+@media all and (max-width: 500px) {
+  .cy2_infobox_container > .cy2_infobox_main {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .cy2_infobox_question{
+    @include cy2_infobox_question(100vw); /* On mobile use full screen width*/
+  }
+  
+}

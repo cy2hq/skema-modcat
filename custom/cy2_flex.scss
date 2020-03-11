@@ -1,0 +1,115 @@
+/* adding class cy2_flex to a group box will make the edit controls flexible */
+
+.cy2_flex.ps_box-scrollarea, .ps_box-scrollarea-row {
+  flex: 1 1 100%;
+  .ps_detail-group {
+     padding: 5px 5px 5px 5px;
+  }
+  
+  .cy2_switch {
+    .ps_box-control {
+      left: 228px;
+      top: -35px;
+   }
+  }
+}
+
+.cy2_flex.ps_box-group {
+   max-width: 680px;
+ 
+  .ps_content-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    //justify-content: flex-start;
+  }
+
+  .ps_box-label {
+    display: flex;
+    flex: 0 0 auto;
+    /*flex: 0 0 180px;*/
+    align-self: self-start;
+    text-align:left;
+  }
+  .ps_box-control {
+    display: flex;
+    //width: auto;
+    flex: 0 0 auto;
+  }
+  .ps_box-value {
+    line-height: 24px;
+  }
+  
+  .ps_box-edit,
+  .ps_box-dropdown,
+  .ps_box-longedit
+   {
+    display: flex;
+    box-sizing: padding-box;
+    flex: 1 0 100%;
+
+    .ps_box-control, .ps_box-value {
+      flex: 1 1 auto;
+      input[type='text'], input[type='url'],input[type='date'],input[type='time'], input[type='number'],
+      input[type='search'],input[type='password'],input[type='datetime'],input[type='datetime-local'],input[type='email'],input[type='tel'], select {
+        flex: 1 1 auto;
+        height: 35px;
+        max-width: 348px;
+      }
+      textarea {
+        flex: 1 1 auto;
+        height: 100px;
+        width: 348px;
+        max-width: 348px;
+      }
+    }
+    .ps_box-value {
+      overflow: hidden;
+      /* if text doesnt fit in box, start on new line */
+      white-space: pre-line;
+    }
+
+  }
+  .ps_box-htmlarea {
+    width: 100%;
+  }
+
+  .cy2_switch:not(.cy2_recommander_page) {
+   width: 100%;
+   display: inherit;
+   .ps_box-control {
+      flex: 0 0 auto;
+   }
+  }
+  .cy2_switch.cy2_recommander_page {
+   width: 100%;
+   display: flex;
+   .ps_box-control {
+      flex: 0 0 auto;
+   }
+  }  
+}
+
+:root.ie .cy2_flex.ps_box-group {
+  .ps_box-edit, .ps_box-dropdown 
+  {
+      .ps_box-control, .ps_box-value {
+          textarea, input[type='text'], input[type='url'],input[type='date'],input[type='time'], input[type='number'],
+          input[type='search'],input[type='password'],input[type='datetime'],input[type='datetime-local'],input[type='email'],input[type='tel'], select { 
+            width: 348px; /* because IE doesn't understand max-width */
+          }
+      }
+  }
+}
+
+
+
+/* nested box groups */
+.cy2_flex.ps_box-group > .ps_content-group > .ps_box-group:not(.psc_layout) {
+   width: 100% !important;
+   
+   .ps_box-label {
+      flex-basis: auto;
+   }
+}
+   

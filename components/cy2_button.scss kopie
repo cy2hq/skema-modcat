@@ -1,0 +1,114 @@
+/* standard button - reset PS button */
+.ps_box-button .ps-button-wrapper .ps-button {
+    background-image: none;
+    border-style: solid;
+		@include box-shadow( none );
+    text-shadow: none;
+	
+	&:not([disabled]):active, &:not([disabled]):hover:active, &:not([disabled]):focus  {
+		background-image: none;
+		@include box-shadow( none );
+	}
+  &:not([disabled]):hover {    
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+}
+
+/* filled button - copy this code to the user template */
+.ps_box-button .ps-button-wrapper .ps-button {
+  border-radius: 0px;
+  background-color: transparent;
+  border-color: $color-standard;
+  border-width: 2px;
+  color: $color-standard;
+  font-size: 0.95em;
+  font-weight: 700;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  &:not([disabled]):hover {
+    background-color: $color-standard-light;
+    border-color: rgb( 255, 255, 255);
+    color: rgb( 255, 255, 255);
+  }
+  &:not([disabled]):active {
+    background-color: $color-standard-light;
+    border-color: rgb( 244, 244, 244);
+    color: rgb( 255, 255, 255);
+  }
+  &:not([disabled]):hover:active {
+    background-color: $color-standard-light;
+    border-color: rgb( 244, 244, 244);
+    color: rgb( 255, 255, 255);
+  }
+  &:not([disabled]):focus {
+    background-color: $color-standard-light;
+    border-color: rgb( 244, 244, 244);
+    color: rgb( 255, 255, 255);
+  }
+}
+/* image only button */
+.ps_box-button.psc_image_only .ps-button-wrapper .ps-button {
+  border-radius: 50%;
+  background-color: $color-standard;
+  box-shadow: 1px 1px 3px -1px rgba(0,0,0,0.5);
+  &:not([disabled]):hover {
+    background-color: $color-standard; /* add opacity */
+    border-color: $color-standard; 
+  }
+  &:not([disabled]):active, &:not([disabled]):hover:active, &:not([disabled]):focus  {
+    background-color: $color-standard;
+    border-color: $color-standard;
+  }
+}
+
+/* primary button */
+.ps_box-button.psc_primary:not(.psc_disabled) .ps-button-wrapper .ps-button {
+	background-color: transparent;
+	border: 2px solid $color-primary;
+  color: $color-primary;
+	
+	&:not([disabled]):active, &:not([disabled]):hover:active, &:hover {
+		background-color: $color-primary;
+		background-image: none;
+		@include box-shadow( none );
+		color: $color-white;
+	}	
+}
+
+/* warning button */
+.ps_box-button.cy2_warning:not(.psc_disabled) .ps-button-wrapper .ps-button {
+	background-color: $color-warning;
+	border: 1px solid $color-warning;
+	
+	&:not([disabled]):active, &:not([disabled]):hover:active, &:hover {
+		background-color: $color-warning-light;
+		background-image: none;
+		border-color: $color-warning-light;
+		@include box-shadow( none );
+		color: $color-white;
+	}	
+}
+
+/* disabled button */
+.ps_box-button.psc_disabled .ps-button-wrapper .ps-button {
+	background-color: $color-disabled !important;
+	border: 1px solid $color-disabled !important;
+	cursor: default;
+}
+
+/* special button */
+.ps_box-button.cy2_modal_button_fullwidth {
+	width: 100%;
+	margin-left: -18px;
+	.ps-button-wrapper {
+		width: 100%;
+		.ps-button {
+			text-align: center;
+			width: 100%;
+		}
+	}
+}

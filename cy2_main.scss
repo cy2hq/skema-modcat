@@ -1,0 +1,59 @@
+/* imports external */
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&subset=latin-ext');
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css");
+@import "fonts/elegant.scss";
+
+/* defaults */
+@import "defaults.scss";
+
+/* icons */
+@import "cy2_icons.scss";
+
+/* base */
+@import "cy2_base.scss";
+
+/* mixins */
+@import "mixin/flexbox.scss";
+@import "mixin/prefixes.scss";
+
+/* imports internal */
+/* components *//*
+@import "components/cy2_boxcontrols.scss";*/
+@import "components/cy2_button.scss";
+/*@import "components/cy2_calendar.scss";
+@import "components/cy2_checkbox.scss";*/
+/*@import "components/cy2_grids.scss";*/
+/*@import "components/cy2_groupbox.scss";*/
+/*@import "components/cy2_modal_calendar.scss";
+@import "components/cy2_prompt.scss";*/
+/*@import "components/cy2_select.scss";*/
+/*@import "components/cy2_scrollarea.scss";*/
+/*@import "components/cy2_switch.scss";*/
+
+/* override standard styles */
+/*@import "override/cy2_2panel.scss";
+@import "override/cy2_apps_content.scss";
+@import "override/cy2_confirmation.scss";
+@import "override/cy2_footer.scss";
+@import "override/cy2_modal.scss";
+@import "override/cy2_ie_adjustments.scss";*/
+
+/* custom styles */
+/*@import "custom/cy2_autocomplete.scss";
+@import "custom/cy2_customboxes.scss";
+@import "custom/cy2_error.scss";
+@import "custom/cy2_extrastyles.scss";*/
+/*@import "custom/cy2_flex.scss";
+@import "custom/cy2_flex_containers.scss";*/
+/*@import "custom/cy2_header_nav.scss";
+@import "custom/cy2_infobox.scss";
+@import "custom/cy2_loginpage.scss";
+@import "custom/cy2_modal_footer.scss";
+@import "custom/cy2_page_status.scss";
+@import "custom/cy2_overview.scss";*/
+@import "custom/cy2_sidebar_action.scss";
+@import "custom/cy2_sidebar_nav.scss";
+@import "custom/cy2_customfields.scss";
+
+/* mobile */
+/*@import "components/cy2_mobile.scss";*/

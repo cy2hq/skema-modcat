@@ -1,0 +1,72 @@
+/* Style for input[type='date'] */
+.ps_box-edit.psc_icon.psc_date {
+  .ps_box-control {
+      &:after {
+        color: $color-darkgray;
+        content: $icon_calendar;
+        font-family: $fontname-icons;
+        font-size: 22px;
+        margin-left: -28px;
+        margin-top: 6px;        
+      }    
+  }
+}
+
+
+/* Calendar modal page and icon */
+#bodyCalendar td[style*="SELECTED_DATE"],
+#bodyCalendar td[style*="CURRENT_DATE"] > a[style*="SELECTED_DATE"]
+{
+  background: $color-menuover !important;
+  border: 1px solid $color-menu !important;
+  font-weight: normal !important;
+}
+
+#headCalendar select option {
+  background-color: $color-white;
+  color: $color-black;
+}
+
+.chrome:root, .firefox:root, .ie:root, .edge:root, .safari:root {
+  .ps_icon-date {
+    content: '';
+    background: transparent;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    top: 0;
+      
+    &:before {
+      color: $color-darkgray;
+      content: '';
+      font-family: $fontname-icons;
+      font-size: 22px;
+    }
+  }
+}
+
+
+.chrome:root {
+  .ps_icon-date {
+    top: 5px;
+    margin-left: -27px;
+  }
+}
+.firefox:root{
+  .ps_icon-date {
+    top: 4px;
+    margin-left: -22px;
+  }
+}
+.safari:root {
+  .ps_icon-date {
+    top: 5px;
+    margin-left: -27px;
+  }
+}
+.ie:root, .edge:root {
+  .ps_icon-date {
+    top: 3px;
+    margin-left: -22px;
+  }
+}

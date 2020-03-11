@@ -1,0 +1,41 @@
+/* Error information */
+
+.psc_error input,
+.psc_error select,
+.psc_error textarea 
+{
+  background-image:none !important;
+  background-color: $color-error !important; 
+  color:#ffffff !important;
+  box-shadow: none;
+}
+
+.ps_box-htmlarea.psc_error, .ps_box-htmlarea.psc_error.cy2_secondpage  {
+	> .ps-htmlarea {
+		  display: block !important;
+		  background-color: $color-error !important; 
+			color:#ffffff !important;
+			padding: 10px 10px 10px 10px;
+	}
+  > .cy2_close_button {
+    color: white;
+    float: right;
+    font-family: 'Fontawesome';
+    font-size: 24px;
+    margin-right: 10px;
+    padding-top: 6px;
+    top: 0;
+    z-index: 999;
+  }
+}
+.ps_box-htmlarea.psc_error.cy2_secondpage {
+	left: 0px;
+	padding: 0;
+	position: absolute;
+  top: 0;
+	width: 100%;
+	z-index: 999;
+  -webkit-box-shadow: 0px 7px 14px -11px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 7px 14px -11px rgba(0,0,0,0.75);
+  box-shadow: 0px 7px 14px -11px rgba(0,0,0,0.75);
+}

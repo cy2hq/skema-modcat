@@ -1,0 +1,28 @@
+.cy2_picture_institution {
+    background-position: 0px 67%;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    max-height: 30%;
+}
+
+.cy2_pagetitle {
+  color: $color-white;
+  font-family: $font-serif;
+  .ps-label {
+    color: $color-white;
+    font-size: 16pt;
+  }
+  .ps_box-value {
+    font-size: 12pt;
+  }
+}
+
+.cy2_content_text {
+  color: $color-black;
+  font-family: $font-serif;
+  font-size: 16px;
+  line-height: 24px;
+  max-width: 600px;
+  padding-left: 50px;
+  padding-top: 50px;
+}

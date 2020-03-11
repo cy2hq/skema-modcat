@@ -1,0 +1,133 @@
+/* scrollarea ordered list (type 3) */
+.ps_box-scrollarea {
+	.ps_box-scrollarea-row.psc_collapsible {
+		border: 1px solid $color-standard;
+		
+		.ps_header-group{
+			background-color: none;
+			border: none;
+			
+			.ps-link {
+				&:before {
+					color: $color-white;
+					content: '\f078';
+					font-family: 'FontAwesome';
+					font-size: 16px;
+					font-weight: normal;
+					margin-top: -5px;
+					padding: 0px 10px 0px 10px;
+				}
+				.ps-text {
+				}
+			}
+
+		}
+		&.psc_close {
+			.ps_header-group{			
+				.ps-link {
+					&:before {
+						content: '\f054';
+						margin-top: 0px;
+					}
+				}
+			}
+		}
+		.ps_detail-group {
+			padding: 0px 20px 0px 20px;
+			.ps_box-rowaction {
+				
+				.ps_box-button.psc_image_only.ptgrid-rowadd + .ps_box-button.psc_image_only.ptgrid-rowdelete {
+					margin-left: -10px;
+				}
+				
+				.ptgrid-rowadd, .ptgrid-rowdelete {
+					.ps-img {
+						display: none;
+					}
+					.ps-button {
+						background-color: transparent;
+						border: none;
+						
+						height: 8px;
+						line-height: 10px;
+						margin-top: 10px;
+						padding-right: 15px;
+						text-align: center;
+						width: 8px;
+					}
+				}
+				.ptgrid-rowadd .ps-button:after {
+						color: $color-standard;
+						font-family: 'FontAwesome';
+						font-size: 22px;
+						content: '\f0fe';
+				}				
+				.ptgrid-rowdelete .ps-button:after {
+						color: $color-standard;
+						font-family: 'FontAwesome';
+						font-size: 22px;
+						content: '\f146';
+				}
+			}
+		}
+		
+	}
+
+}
+
+
+.ps_box-scrollarea.cy2_box-scrollarea {
+	.ps_box-scrollarea-row {
+		border: 2px solid $color-standard;
+		.ps_header-group {
+			background-color: $color-standard;
+			padding: 5px 5px 5px 15px;
+			.ps-text {
+				color: white;
+			}
+		}
+		.ps_content-group {
+			.ps_box-rowaction{
+				.ps_box-button.psc_image_only {
+					margin-top: 10px;
+					.ps-button-wrapper {
+					.ps-button { }
+					}
+				}
+			}
+		}
+	}
+}
+
+/*
+:root.chrome {
+	.ps_box-scrollarea {
+		.ps_box-scrollarea-row {
+			.ps_header-group {
+				.ps-link {
+					margin-top: -20px;
+				}
+			}
+		}
+	}	
+}*/
+
+.ps_box-scrollarea.psc_border-bottomonly {
+	.ps_box-scrollarea-row:not(:last-child) {
+		/* commented to suspress the red line - pssli - 25.06.2019
+		 border-bottom: 1px solid $color-standard;*/
+		border-top: 0;
+		border-left: 0;
+		border-right: 0;
+	}
+}
+
+
+.ps_box-scrollarea .ps_header-group > .ps-link,
+.ps_header-group > .ps-link:hover,
+.psc_collapsible > .ps_header-group > .ps-link:hover
+ {
+	color: $color-white;
+	font-family: $standard-font;
+	font-weight: normal;
+}

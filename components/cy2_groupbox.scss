@@ -1,0 +1,133 @@
+/* Default ps_box-group */
+.ps_box-group:not(.psc_layout) {
+    color: $color-black;
+    font-family: $standard-font;
+    padding: 0px 0px 0px 0px;
+	
+    &:not(.psc_border-none) {
+		border: 1px solid $color-standard;
+	}
+	.ps_header-group {
+                background-color: $color-standard;
+				color: $color-white;
+                padding: 5px 5px 5px 15px;
+                >.ps-text, >.ps-link {
+                        color: $color-white;
+                        font-family: $standard-font;
+                        font-weight: 400;
+                }
+	}
+	>.ps_detail-group, >.ps_content-group {
+                padding: 5px 20px 20px 20px;
+	}
+        &.cy2_nopadding {
+                >.ps_detail-group {
+                        padding: 0px 0px 0px 0px;
+                }
+        }        
+}
+
+.ps_box-group.psc_collapsible {
+	>.ps_header-group {
+                background-color: $color-standard;
+                color: $color-white;
+                padding: 5px 15px 5px 15px;
+        }
+        &:not(.cy2_icon_right) {
+                >.ps_header-group>.ps-link:before {
+                        color: $color-white;
+                        content: '\f068'; 
+                        font-family: "FontAwesome";
+                }
+        }
+        &.cy2_icon_right {
+                >.ps_header-group>.ps-link {
+                        margin-left: -15px;
+                        &:before {
+                                content: '';
+                        }
+                        &:after {
+                                color: $color-white;
+                                content: '\f068'; 
+                                font-family: "FontAwesome";
+                                float: right;
+                        }
+                }
+        }        
+	>.ps_detail-group, >.ps_content-group {
+	}
+}
+
+.ps_box-group.psc_collapsible.psc_close {
+         &:not(.cy2_icon_right) {
+                 >.ps_header-group>.ps-link:before {
+                         content: '\f067'; 
+                 }
+         }
+         &.cy2_icon_right {
+                >.ps_header-group>.ps-link:before {
+                        content: '';
+                }
+                 >.ps_header-group>.ps-link:after {
+                         content: '\f067'; 
+                 }
+         }
+}
+
+.ps_box-group.cy2_fullwidth {
+        width:100% !important;
+}
+
+/* Colored boxes */
+.ps_box-group.cy2_color_leaf {
+        border: 1px solid $color-leaf;
+	>.ps_header-group {
+                background-color: $color-leaf;
+        }
+}
+
+.ps_box-group.cy2_color_moss {
+        border: 1px solid $color-moss;
+	>.ps_header-group {
+                background-color: $color-moss;
+        }
+}
+
+.ps_box-group.cy2_color_sandstone {
+        border: 1px solid $color-sandstone;
+	>.ps_header-group {
+                background-color: $color-sandstone;
+        }
+}
+
+.ps_box-group.cy2_color_burgundy {
+        border: 1px solid $color-burgundy;
+	>.ps_header-group {
+                background-color: $color-burgundy;
+        }
+}
+
+.ps_box-group.cy2_color_lavender {
+        border: 1px solid $color-lavender;
+	>.ps_header-group {
+                background-color: $color-lavender;
+        }
+}
+
+/* Groupbox is first control: add some space */
+.ps_box-group:not(.psc_layout):first-child {
+        margin-top: 20px;        
+}
+
+/* Groupbox is last control: add some space */
+.ps_box-group:not(.psc_layout):last-child {
+        margin-bottom: 5px;
+}
+
+/* Between 2 default groupboxes: add some space */
+.ps_box-group:not(.psc_layout) + .ps_box-group:not(.psc_layout) {
+        margin-top: 20px;
+}
+
+
+

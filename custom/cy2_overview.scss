@@ -1,0 +1,75 @@
+.cy2_overview_page {
+	@include flexbox();
+	@include flex(0 0 100%);
+	@include flex-direction(row);
+	@include flex-wrap(wrap);
+	@include justify-content(left);
+	@include align-items(flex-start);
+	@include align-content(flex-start);
+	
+	& > .ps_box-group {
+		@include flex(0 1 400px);
+		margin-left: 20px;
+		min-width: 320px;
+		> .ps_box-group {
+			margin-left: 0px;
+		}
+	}
+	
+	& > .ps_box-group > .ps_detail-group > .ps_box-group {
+		border: none;
+		> .ps_header-group {
+			background-color: transparent;
+			> .ps-text {
+				color: inherit;
+			}
+		}
+	}
+	
+	ol, ul {
+		padding-left: 10px;
+	}
+	.ps_box-edit, .ps_box-dropdown, .ps_box-longedit, .cy2_switch {
+		display: flex;
+		flex-direction: column;
+	}	
+	div.ps_box-label, .ps-label, div.ps_box-label > span.ps-text {
+			/* this will make labels appear above the control, when the display size is small */
+		color: rgba(52,53,54,0.7) !important;
+		display: flex;
+		font-size: 14px !important;	
+		text-align:left;
+		width: 100%;
+	}
+	.ps_box-control {
+		display: flex ;
+		width: 100%;
+	}
+	.ps_box-control {
+			> textarea, input[type='text'], input[type='url'],input[type='date'],input[type='time'], input[type='number'],
+      input[type='search'],input[type='password'],input[type='datetime'],input[type='datetime-local'],input[type='email'],input[type='tel'], select  {
+				width: 100% ;
+		}
+	}
+	
+	.cy2_overview_item > .ps_detail-group .ps_header-group {
+		background-color: transparent;
+		color: $color-standard;
+		font-size: 16px;
+		font-weight: bold;
+		margin-left: -0.5em;
+		.ps-text {
+			color: $color-standard;
+			font-size: 16px;
+			font-weight: bold;
+			margin-left: -0.5em;
+		}
+	}
+}
+
+.psc_form-small .cy2_overview_page {
+	& > .ps_box-group {
+		margin-left: 0px;
+		width: 100%;
+	}
+}

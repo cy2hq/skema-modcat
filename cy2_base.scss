@@ -1,0 +1,10 @@
+body {
+  color: $color-black;
+  font-family: $standard-font;
+  font-size: 11pt;
+}
+:root.ios {
+	html, body, form {
+	  height:auto;
+	}
+}

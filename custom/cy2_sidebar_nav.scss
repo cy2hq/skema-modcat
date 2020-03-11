@@ -1,0 +1,105 @@
+/* sidebar navigation */
+.ps_box-group.psc_layout > .psa_cs_navigation {
+  background-color: $color-menu;
+  /* background: radial-gradient(circle 200px at 5% 25%, rgb(123, 162, 195), rgb(76, 115, 147)); */
+  
+  .ps_box-scrollarea-row.psa_vtab {
+    padding-bottom: 5px;
+    padding-top: 5px;
+  }
+  .psa_vtab {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);  
+  }
+
+  .psa_list-linkmenu.psc_list-has-icon {
+    img.ps-img {
+      margin-top: -12px !important;
+    }
+  }
+  
+  .psa_list-linkmenu li.ps_box-scrollarea-row {
+    padding-bottom: 5px !important;
+    padding-top: 5px !important;
+    > .ps_box-link > .ps-link-wrapper > .ps-link {
+      color: $color-darkgray;  
+    }
+  }
+  
+  .psa_list-linkmenu:not(.psc_grid-selectedhighlight) li.ps_box-scrollarea-row.psc_selected {
+    background-color: $color-selected;
+    color: $color-white; 
+  }
+}
+
+
+
+.psa_list-linkmenu  {
+.ps_box-scrollarea-row {
+  -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; box-sizing:border-box;
+  padding:0.7em 0.7em;  
+  min-height:1em;
+}
+.ps_box-scrollarea-row + .ps_box-scrollarea-row {
+  border-top:none;
+}
+.ps_grid-body {
+  list-style-type:none;
+  font-size:1em;
+  padding:0;
+}
+
+li.ps_box-scrollarea-row > .ps_box-link > .ps-link-wrapper > .ps-link{
+  color: $color-black;
+  font-weight: normal;
+  margin-left:10px;
+  position: relative;
+}
+
+li.ps_box-scrollarea-row.psc_selected > .ps_box-link > .ps-link-wrapper > .ps-link, 
+li.ps_box-scrollarea-row.psc_selected > .ps_box-link > .ps-link-wrapper > .ps-link .ps-text {
+  font-weight: normal;
+}
+}
+
+.psa_vtab {
+border-bottom:1px solid #bbb;  
+display:block;
+font-weight:normal;
+padding:.5em;
+white-space:normal;
+
+& > * > .ps-link-wrapper{
+  position:absolute;
+}
+ul.ps_grid-body {
+  list-style-type:none;
+  padding:0;
+}
+.ps_box-scrollarea-row {
+  position:relative;
+}
+
+& > .ps-button-wrapper,
+& > .ps-button-wrapper > .ps-button {
+  display:block;
+  font-weight: inherit !important;
+  color: inherit !important;
+  text-decoration:none !important;
+  @text-shadow( none );    
+}
+&.psc_selected
+{
+  font-weight: bold;
+  background: $color-selected;
+}
+}
+
+
+/* style for the list number in the menu items */
+.psa_list-linkmenu .psc_list_count {
+  background: $color-lightgray;  
+  border: 1px solid $color-gray;
+  @include box-shadow( none );
+  color: $color-darkgray;
+  @include text-shadow( none );
+}

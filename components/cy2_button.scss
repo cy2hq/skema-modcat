@@ -1,0 +1,245 @@
+$button-color: #ff0000;
+$disabled-color: #4a4a4a;
+
+%skema_button {
+  font-size: 0.95em;
+  font-weight: 700;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  background-color: transparant;
+  border-width: 2px;
+  border-style: solid;
+  background-image: none;
+  border-radius: 0;
+  text-shadow: none;
+  box-shadow: none;
+}
+
+//.ps_box-button:not(.psc_fullsize_button):not(.ps_button_backnav):not(.ps_button_stdheader):not(.ps_header-next):not(.ps_header-next):not(.ps_header-previous):not(.ps_header_button):not(.ps_process-submit):not(.psc_panel_button):not(.psc_reldisp-prompt):not(.psc_disabled):not(.cy2_sidebar_button)
+.ps_box-button:not(.psc_disabled)
+.ps-button-wrapper .ps-button {
+
+  color: $color-standard;
+  border-color: $color-standard;
+  @extend %skema_button;
+  
+  &:hover {
+    background-color: $color-standard;
+    color: white;
+    transition: all 0.3s linear;
+  }
+  &:link, &:visited {
+    background-color: transparant;
+    color: $color-standard;
+    border-color: $color-standard;
+  }
+  &:active {
+     border-color: lighten( $color-standard, 30%);
+     background-color: lighten( $color-standard, 30%);
+     color: white;
+    transition: all 0.3s linear;
+  }
+}
+/*
+.ps_box-button.psc_disabled {
+//:not(.psc_fullsize_button):not(.ps_button_backnav):not(.ps_button_stdheader):not(.ps_header-next):not(.ps_header-next):not(.ps_header-previous):not(.ps_header_button):not(.ps_process-submit):not(.psc_panel_button):not(.psc_reldisp-prompt):not(.cy2_sidebar_button) .ps-button-wrapper .ps-button
+
+  background-color: transparant;
+  color: $color-gray;
+  border-color: $color-gray;
+  @extend %skema_button;
+  
+  &:hover {
+    background-color: lighten( $color-gray, 60%);
+  
+  }
+  &:link, &:visited {
+    background-color: transparant;
+    color: $color-gray;
+    border-color: $color-gray;
+  }
+  &:active {
+     border-color:  $color-gray;
+     background-color: lighten( $color-gray, 60%);
+     color: $color-gray;
+  }
+}
+*/
+
+/* standard button - reset PS button */
+.ps_box-button .ps-button-wrapper .ps-button {
+    background-image: none;
+    border-style: solid;
+		@include box-shadow( none );
+    text-shadow: none;
+	
+	&:not([disabled]):active, &:not([disabled]):hover:active, &:not([disabled]):focus  {
+		background-image: none;
+		@include box-shadow( none );
+	}
+  &:not([disabled]):hover {    
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s linear;
+    -ms-transition: all 0.3s linear;
+    -o-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+  }
+}
+
+/* filled button - copy this code to the user template */
+.ps_box-button .ps-button-wrapper .ps-button {
+  border-radius: 0px;
+  background-color: transparent;
+  border-color: $color-standard;
+  border-width: 2px;
+  color: $color-standard;
+  font-size: 0.95em;
+  font-weight: 700;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  &:not([disabled]):hover {
+    background-color: $color-standard-light;
+    border-color: rgb( 255, 255, 255);
+    color: rgb( 255, 255, 255);
+  }
+  &:not([disabled]):active {
+    background-color: $color-standard-light;
+    border-color: rgb( 244, 244, 244);
+    color: rgb( 255, 255, 255);
+  }
+  &:not([disabled]):hover:active {
+    background-color: $color-standard-light;
+    border-color: rgb( 244, 244, 244);
+    color: rgb( 255, 255, 255);
+  }
+  &:not([disabled]):focus {
+    background-color: $color-standard-light;
+    border-color: rgb( 244, 244, 244);
+    color: rgb( 255, 255, 255);
+  }
+}
+
+/* image only button */
+.ps_box-button.psc_image_only .ps-button-wrapper .ps-button {
+  border-radius: 0;
+  background-color: $color-standard;
+  box-shadow: 1px 1px 3px -1px rgba(0,0,0,0.5);
+  &:not([disabled]):hover {
+    background-color: lighten( $color-standard, 15%);
+    border-color: lighten( $color-standard, 15%);
+  }
+  &:not([disabled]):active, &:not([disabled]):hover:active, &:not([disabled]):focus  {
+    background-color: lighten( $color-standard, 15%);
+    border-color: lighten( $color-standard, 15%);
+  }
+}
+
+/* primary button */
+.ps_box-button.psc_primary:not(.psc_disabled) .ps-button-wrapper .ps-button {
+	background-color: transparent;
+	border: 2px solid $color-primary;
+  color: $color-primary;
+	
+	&:not([disabled]):active, &:not([disabled]):hover:active, &:hover {
+		background-color: $color-primary;
+		background-image: none;
+		@include box-shadow( none );
+		color: $color-white;
+	}	
+}
+
+/* warning button */
+.ps_box-button.cy2_warning:not(.psc_disabled) .ps-button-wrapper .ps-button {
+	background-color: $color-warning;
+	border: 2px solid $color-warning;
+  color: $color-white;
+	
+	&:not([disabled]):active, &:not([disabled]):hover:active, &:hover {
+		background-color: $color-warning-light;
+		background-image: none;
+		border-color: $color-warning-light;
+		@include box-shadow( none );
+		color: $color-white;
+	}	
+}
+
+/* disabled button */
+/*
+.ps_box-button.psc_disabled .ps-button-wrapper .ps-button {
+	background-color: $color-disabled !important;
+	border: 1px solid $color-disabled !important;
+	cursor: default;
+}
+*/
+.ps_box-button.psc_disabled {
+  .ps-button-wrapper .ps-button {
+    color: $color-disabled;
+    border-color: $color-disabled;
+    &:hover {
+      background-image: none;
+      box-shadow: none;
+      cursor: not-allowed;
+      text-shadow: none;
+    }    
+  }
+}
+
+
+/* special button */
+.ps_box-button.cy2_modal_button_fullwidth {
+	width: 100%;
+	margin-left: -18px;
+	.ps-button-wrapper {
+		width: 100%;
+		.ps-button {
+			text-align: center;
+			width: 100%;
+		}
+	}
+}
+
+/* header button */
+.ps_box-button.ps_button_stdheader {
+  .ps-button,
+  .ps-button:link,
+  .ps-button:not(.psc_disabled) .ps-button:hover {
+    text-shadow: none;
+    box-shadow: none;
+    border: none;
+    background-image: none !important;
+    text-align: left;
+    display: inline-block;
+    background-color: transparent;
+  }
+}
+
+/* button white */
+.ps_box-button.psc_modal-done.psc_primary .ps-button-wrapper .ps-button,
+.ps_box-button:not(.psc_disabled).cy2_color_white .ps-button-wrapper .ps-button {
+
+  color: $color-white;
+  border-color: $color-white;
+  
+  &:hover, &:link:hover {
+    background-color: $color-white;
+    color: $color-darkgray;
+    transition: all 0.3s linear;
+  }
+  &:link, &:visited {
+    background-color: transparant;
+    color: $color-white;
+    border-color: $color-white;
+  }
+  &:focus {
+    border-color: rgba(255,255,255,0.5);
+    background-color: rgba(255,255,255,0.5);
+    color: $color-darkgray;
+  }
+  &:active {
+    border-color: rgba(255,255,255,0.7) !important;
+    background-color: rgba(255,255,255,0.7) !important;
+    color: $color-darkgray !important;
+    transition: all 0.3s linear;
+  }
+}
+

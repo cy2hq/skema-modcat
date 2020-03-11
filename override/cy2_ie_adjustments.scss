@@ -1,0 +1,11 @@
+/* These specific fixes are for Internet explorer.  */
+
+:root.ie:not(.edge):not(.psc_form-small)  td.CY2_PRE_EDU_COL > div{
+  -ms-word-break: break-all;
+  max-width: 200px;
+}
+
+
+:root.ie:not(.edge).psc_form-small .cy2_flex_object .ps_box-grid-flex .ps_box-gridc {
+  width: 100%;
+}

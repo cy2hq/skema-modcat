@@ -1,0 +1,10 @@
+.cy2_flex {
+	:root.firefox .ps_icon-prompt::before,
+	:root.firefox .ps_box-button.psc_reldisp-prompt > .ps-button-wrapper > .ps-button::before,
+	:root.ie .ps_icon-prompt::before,
+	:root.ie .ps_box-button.psc_reldisp-prompt > .ps-button-wrapper > .ps-button::before,
+	:root.edge .ps_icon-prompt::before,
+	:root.edge .ps_box-button.psc_reldisp-prompt > .ps-button-wrapper > .ps-button::before {
+		top: 8px;
+	}
+}

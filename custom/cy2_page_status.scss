@@ -1,0 +1,20 @@
+.cy2_page_status_done {
+	margin-left: -2.5em;
+	margin-top: -20px;
+	padding-right: 0px;
+	padding-top: .25em;
+	position: absolute;
+	right: 1em;
+	top: 50%;
+  &:after {
+    content: '\f00c';
+    font-size: 32px;
+    color: $color-green;
+    font-family: 'FontAwesome';
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.4);
+  }
+	
+  & .ps_box-value {
+	display: none;
+  }
+}

@@ -1,0 +1,11 @@
+/* override characteristics of the 2 panel action*/
+
+:root.mac .psc_panel-container.psc_panel-fixed .psc_panel-action {
+	width: $panel-action-width;
+	border-color: $panel-action-border-color;
+}
+
+/* browsers on Windows have smaller panel due to the scroll bar */
+:root:not(.mac) .psc_panel-container.psc_panel-fixed .psc_panel-action {
+	width: ($panel-action-width + 2em);
+}

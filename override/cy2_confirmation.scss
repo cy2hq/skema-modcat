@@ -1,0 +1,92 @@
+
+/* override standard style components */
+.psc_confirmation-area, .cy2_branding .psc_confirmation-area  {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	bottom: 50%;
+	color: $color-black;
+	font-family: $standard-font;
+	font-size: 16px;
+	height: 150px;
+	left: 50%;
+	opacity: 1;
+	right: 50%;
+	top: 50%;
+	white-space:normal;
+	width: 500px;
+	word-wrap: break-word;
+  background-color: #c8ead6;
+  border: 2px solid #76a68a;
+  margin-left: -250px;	
+  margin-top: -75px;
+  position: fixed;
+  text-align: center;
+	-webkit-box-shadow: 9px 9px 10px 0px rgba(50, 50, 50, 0.75);
+	-moz-box-shadow:    9px 9px 10px 0px rgba(50, 50, 50, 0.75);
+	box-shadow:         9px 9px 10px 0px rgba(50, 50, 50, 0.75);	
+  -webkit-box-sizing:border-box; -moz-box-sizing:border-box; -ms-box-sizing:border-box; box-sizing:border-box;
+  -webkit-text-shadow:none !important; -moz-text-shadow:none !important; -ms-text-shadow: none !important; text-shadow:none !important;
+	.ps_box-longedit {
+		white-space:normal;
+	}
+	#PT_CONFIRM_CLOSE {
+		img {
+			display: none;
+		}
+		&:after {
+			font-family: 'FontAwesome';
+			font-size: 20px;
+			content: '\f00d';
+			color: white;
+			font-weight: normal;
+		}
+		
+	}
+}
+
+@media all and (max-width: 504px ) {
+	.psc_confirmation-area  {
+		left: 2px;
+		margin-left: 0;
+		right: auto;
+		width: 98vw;
+	}
+}
+
+.psc_confirmation-area:not(.psc_error) {
+	.ps_box-button.psc_confirmation-close > .ps-button-wrapper > .ps-button {
+	  background-color: transparent !important;
+	  border-color: transparent !important;
+	  opacity: 1;
+    &:hover {
+        background-color: transparent !important;
+    }
+	}
+}
+.psc_confirmation-area.psc_error {
+	background-color: $color-error;
+	color: $color-darkgray;
+
+	.ps_box-button.psc_confirmation-close > .ps-button-wrapper > .ps-button {
+	  background-color: $color-error !important;
+	  border-color: $color-error !important;
+	  opacity: 1;
+	}
+}
+
+.psc_confirmation-area:before {
+  border: 4px solid white;
+  bottom: -4px;
+  content: "";
+  display: block;
+  left: -4px;
+  position: absolute;
+  right: -4px;
+  top: -4px;
+  z-index: -1;
+}
+.psc_confirmation-msg {
+	font-weight: normal;
+}
+

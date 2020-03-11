@@ -1,0 +1,109 @@
+.cy2_flex_toolbox {
+	align-items: center;
+	display: flex;
+}
+
+.cy2_flex_toolhamburger {
+	.ps-button > img:only-child {
+		max-height: inherit;
+	}
+	.ps_box-button:not(.psc_disabled) > .ps-button-wrapper > .ps-button,
+	.ps_box-button:not(.psc_disabled) > .ps-button-wrapper > .ps-button:link {
+		background-color: transparent !important;
+		border: none !important;
+		color: $color-white;
+		box-shadow: none;
+	}
+}
+
+.cy2_flex_toolnav {
+	background-color: $color-menu;
+	margin-top: 0;
+	min-width: 325px;
+	padding-top: 0;
+	position: absolute;
+	right: 0px;
+	top: 40px;
+	@include box-shadow( -2px 4px 10px 0px rgba(0,0,0,0.75));
+	&.psc_close {
+		display: none;
+	}
+	&.psc_open {
+		display: flex;
+	}
+	> ul {
+		list-style-type: none;
+		list-style-position: outside;
+		padding-left: 0;
+		
+		> li {
+			display: block;
+			
+			.ps_box-link {
+				width: 100%;
+				> .ps-link-wrapper {
+					display: block;
+					width: 100%;
+				}
+				> .ps-link-wrapper > a.ps-link {
+					align-items: center;
+					display: flex;
+					flex-flow: row nowrap;
+					min-height: 43px;
+					text-decoration: none;
+					width: 100%;
+					
+					> .ps-text {
+						color: $color-black;
+						order: 2;
+						flex: 1 0 auto;
+						padding-left: 10px;
+						text-decoration: none;
+					}
+					>.ps-img {
+						order: 1;
+						padding-left: 5px;
+						width: 26px;
+					}
+					
+					&:hover {
+						background-color: $color-menuover;
+						> .ps-text {
+							color: $color-white;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
+/* when the screen is small the title will be place under the logo and menu button */
+@media all and (max-width: 500px) {
+	.cy2_flex_topbar, .cy2_flex_logobox, .cy2_flex_titlebox, .cy2_flex_toolbox
+	{
+		display: flex;
+		align-items: stretch;
+		flex-flow: row wrap;
+	}
+	.cy2_flex_logobox, .cy2_flex_titlebox, .cy2_flex_toolbox {
+		flex: 1 1 160px;
+	}
+	.cy2_flex_logobox{
+		order:1;
+		justify-content: left;
+		min-width: 160px;
+	}
+	.cy2_flex_titlebox{
+		order: 2;
+		min-width: 160px;
+	}
+	.cy2_flex_toolbox {
+		order: 3;
+		justify-content: right;
+		min-width: 20px;
+		flex: 0 1 auto;
+	}
+}

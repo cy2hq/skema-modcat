@@ -1,0 +1,73 @@
+/* checkbox */
+.ps_box-checkbox:not(.psc_disabled):not(.ps_box_grid-col).psc_standard {
+  width: 100%;
+  min-height: 35px;
+  &>.ps_box-control > label > span { 
+    display:none;
+  }
+  &>.ps_box-label {
+    // border: 1px solid blue;
+    width: 89%;
+    float: left;
+    height: 28px;
+    padding-top: 4px;
+    margin: 0px 0px;
+    box-sizing: border-box;
+    &>.ps-label {
+      font-weight: 400;
+    }
+  }
+  &>.ps_box-control {
+	  width: 28px;
+	  height: 28px;
+	  background-color: #d0d0d0;
+	  margin: 0px 0px;
+    float: left;
+	  position: relative;
+  & .ps_indicator {
+    display: block !important;
+  }
+  & input[type=checkbox] {
+	visibility: hidden;
+  }
+  & label {
+	  cursor: pointer;
+	  position: absolute;
+	  width: 26px;
+	  height: 26px;
+	  left: 1px;
+	  top: 1px;
+  	background-color: #ffffff;
+    &:after {
+	    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+	    filter: alpha(opacity=0);
+	    opacity: 0;
+	    content: '';
+	    position: absolute;
+	    width: 16px;
+	    height: 8px;
+	    background: transparent;
+	    top: 5px;
+	    left: 4px;
+	    border: 3px solid #000000;
+	    border-top: none;
+	    border-right: none;
+      -webkit-transform: rotate(-45deg);
+	    -moz-transform: rotate(-45deg);
+	    -o-transform: rotate(-45deg);
+	    -ms-transform: rotate(-45deg);
+	    transform: rotate(-45deg);
+    }
+    &:hover::after {
+	    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=30)";
+	    filter: alpha(opacity=30);
+	    opacity: 0.3;
+    }
+  }
+  & input[type=checkbox]:checked + label:after {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+  }
+  }
+}

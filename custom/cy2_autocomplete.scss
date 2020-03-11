@@ -1,0 +1,89 @@
+.cy2_box_autocomplete {
+  background-color: white;
+  border: 1px solid gray;
+  box-sizing: border-box;
+  height: 75px;
+//  margin-top: -75px;
+  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
+//  position: relative;
+  position: absolute;
+//  top: 75px;
+  top: 30px;
+  width: 100px;
+  z-index: 1000;
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    li {
+      padding-left: 10px;
+      &:hover {
+        background-color: $color-menuover;
+        color: $color-white;
+        cursor: pointer;
+      }
+      i {
+        color: rgb( 128, 128, 128);
+      }
+    }
+  }
+}
+
+/* old code 
+.cy2_icon_delete {
+  display: block;
+  float: right;
+  position: absolute;
+  right: 0px;
+  top: -2px;
+}
+
+.cy2_icon_delete {
+  font-family: 'FontAwesome';
+  cursor: pointer;
+  font-size: 22px;
+  &:after {
+    content: '\f057';
+    color: $color-darkgray;
+  }
+}
+:root.ie .cy2_box_autocomplete {
+  top: 35px;
+  left: 241px;
+}
+*/
+.ps_box-edit.cy2_autocomplete_descr {
+  flex: 1 1 auto !important;
+  .ps_box-label {
+    width: 35%;
+  }
+}
+.cy2_icon_delete {
+  
+  > .ps-button-wrapper {
+    > .ps-button, .ps-button:link {
+      background-image: none;
+      border-radius: 0;
+      border: none;
+      box-shadow: none;
+      color: $color-darkgray;
+      display: inline-block;
+      overflow: hidden;
+      padding: 0;
+      text-decoration: none;
+      text-overflow: inherit;
+      text-shadow: none;
+      vertical-align: bottom;
+      
+      font-family: 'FontAwesome';
+      cursor: pointer;
+      font-size: 22px;
+      &:after {
+        content: '\f057';
+        color: $color-darkgray;
+      }
+    }
+  }
+}

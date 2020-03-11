@@ -1,0 +1,70 @@
+/* desktop */
+@media (min-width: 640px) {
+  
+    .cy2_composition_first {
+      flex: 1 1 auto !important;
+      .ps_box-label {
+        flex: 0 0 $label-width !important;
+      }
+      .ps_box-value {
+        flex: 0 1 auto  !important;
+      }
+    }
+    .cy2_composition_after {
+
+      flex: 0 1 auto  !important;
+      .ps_box-label {
+         flex: 0 1 auto  !important;
+         padding-left: 5px;
+      }
+      .ps_box-value, .ps_box-control, .ps_box-control .ps-edit {
+        flex: 1 0 auto  !important;
+      }
+    }
+}
+
+
+@media all and (max-width: 475px) {
+	.ps_box-edit:not(.psc_disabled), .ps_box-dropdown, .ps_box-longedit, .cy2_switch {
+		display: flex;
+		flex-direction: column;
+    width: calc( 100vw - 40px);
+	}	
+	.ps_box-label, .ps-label {
+			/* this will make labels appear above the control, when the display size is small */
+		display: flex;
+		width: 100% !important;
+	}
+	.ps_box-control {
+		display: flex ;
+		width: 100%;
+	}
+	.ps_box-control {
+		> textarea, input[type='text'], input[type='url'],input[type='date'],input[type='time'], input[type='number'],
+    input[type='search'],input[type='password'],input[type='datetime'],input[type='datetime-local'],input[type='email'],input[type='tel'], select  {
+			width: 100% ;
+		}
+	}
+}
+    
+
+
+
+
+@media all and (min-width: 960px) {
+  .cy2_flex_titlebox .ps_box-value{
+      font-size: 18px !important;
+  @include justify-content(center);
+  }
+}
+@media all and (min-width: 667px) {
+  .cy2_flex_object {
+    width: 680px;
+  }
+}
+@media all and (min-width: 320px) and (max-width: 666px) {
+  .cy2_flex_object {
+    width: 100%;
+    min-width: initial;
+  }
+}

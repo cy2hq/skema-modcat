@@ -1,0 +1,11 @@
+### Skema application form ###
+
+Please see https://sass-lang.com/install for sass/scss installation
+
+Compile using sass
+sass cy2_main.scss:output/cy2_branding.css --style compressed
+
+Compile using scss
+scss --output=compressed cy2_main.scss output/cy2_branding.css
+
+Upload cy2_branding.css to the peopletools > Portal > Branding objects on Skema environment
